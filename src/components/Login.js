@@ -1,6 +1,19 @@
-const Login = () => {
-  const handleSubmit = () => {
-    // handle submit
+import { useState } from "react";
+import { connect } from "react-redux";
+import { setAuthedUser } from "../actions/authedUser";
+
+const Login = (props) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errMess, setErrMess] = useState(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { users, dispatch } = props;
+    if (users[username] && users[username].password == password) {
+      setErrMess(null);
+      dispatch(setAuthedUser(users[username].id));
+    } else setErrMess("username or password is incorrect");
   };
 
   return (
@@ -13,16 +26,28 @@ const Login = () => {
         />
       </div>
 
+      {errMess && <h1>{errMess}</h1>}
+
       <div className="container">
         <label>
           <b>Username</b>
         </label>
-        <input type="text" placeholder="Enter Username" required />
+        <input
+          type="text"
+          placeholder="Enter Username"
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
 
         <label>
           <b>Password</b>
         </label>
-        <input type="password" placeholder="Enter Password" required />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
         <button type="submit">Login</button>
       </div>
@@ -30,4 +55,10 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = ({ users }) => {
+  return {
+    users: users,
+  };
+};
+
+export default connect(mapStateToProps)(Login);

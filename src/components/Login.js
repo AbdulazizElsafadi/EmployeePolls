@@ -3,8 +3,10 @@ import { connect } from "react-redux";
 import { setAuthedUser } from "../actions/authedUser";
 
 const Login = (props) => {
+  //change to useRef
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const [errMess, setErrMess] = useState(null);
 
   const handleSubmit = (event) => {
@@ -13,6 +15,7 @@ const Login = (props) => {
     if (users[username] && users[username].password == password) {
       setErrMess(null);
       dispatch(setAuthedUser(users[username].id));
+      // navigate to home page
     } else setErrMess("username or password is incorrect");
   };
 

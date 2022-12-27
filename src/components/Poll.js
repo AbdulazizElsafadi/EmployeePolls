@@ -1,5 +1,5 @@
-const Poll = () => {
-  return <h1>Poll</h1>;
+const Poll = ({ id }) => {
+  return <h1>Poll {id}</h1>;
 };
 
 export default Poll;

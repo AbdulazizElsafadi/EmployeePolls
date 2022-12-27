@@ -53,3 +53,25 @@ span.psw {
   float: right;
   padding-top: 16px;
 }
+
+.polls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border: solid black;
+  padding: 8px;
+}
+
+.answered {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  border: solid green;
+}
+
+.unanswered {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  border: solid red;
+}

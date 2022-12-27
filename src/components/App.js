@@ -2,13 +2,21 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import Login from "./Login";
 import { async_getData } from "../actions/shared";
+import Dashboard from "./Dashboard";
+// import LoadingBar from "react-redux-loading-bar";
 
 const App = (props) => {
   useEffect(() => {
     props.dispatch(async_getData());
   }, []);
 
-  return <Login />;
+  return props.loading ? null : <Dashboard />;
 };
 
-export default connect(null)(App);
+const mapStateToProps = ({ authedUser }) => {
+  return {
+    loading: authedUser === null,
+  };
+};
+
+export default connect(mapStateToProps)(App);

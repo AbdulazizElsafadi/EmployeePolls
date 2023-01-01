@@ -1,21 +1,26 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setAuthedUser } from "../actions/authedUser";
 
 const Login = (props) => {
-  //change to useRef
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const username = useRef("");
+  const password = useRef("");
+  const navigate = useNavigate();
 
   const [errMess, setErrMess] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const { users, dispatch } = props;
-    if (users[username] && users[username].password == password) {
+    if (
+      users[username.current.value] &&
+      users[username.current.value].password === password.current.value
+    ) {
       setErrMess(null);
-      dispatch(setAuthedUser(users[username].id));
+      dispatch(setAuthedUser(users[username.current.value].id));
       // navigate to home page
+      navigate("/Dashboard");
     } else setErrMess("username or password is incorrect");
   };
 
@@ -38,7 +43,7 @@ const Login = (props) => {
         <input
           type="text"
           placeholder="Enter Username"
-          onChange={(e) => setUsername(e.target.value)}
+          ref={username}
           required
         />
 
@@ -48,7 +53,7 @@ const Login = (props) => {
         <input
           type="password"
           placeholder="Enter Password"
-          onChange={(e) => setPassword(e.target.value)}
+          ref={password}
           required
         />
 

@@ -17,16 +17,14 @@ const Dashboard = (props) => {
           answers.map((answer) => {
             return answer === question ? (flag = true) : null;
           });
-          return !flag ? (
-            <Poll id={question} key={question} answered={false} />
-          ) : null;
+          return !flag ? <Poll key={question} id={question} /> : null;
         })}
       </div>
       {/* // User answer those questions */}
       <h2 className="center">Done</h2>
       <div className="answered">
         {answers.map((answer) => (
-          <Poll key={answer} id={answer} answered={true} />
+          <Poll key={answer} id={answer} />
         ))}
       </div>
     </div>

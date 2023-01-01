@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { connect } from "react-redux";
 import { async_addQuestion } from "../actions/questions";
+import { useNavigate } from "react-router";
 
 const NewPoll = ({ authedUser, dispatch }) => {
-  const [questionOne, setQuestionOne] = useState("");
-  const [questionTwo, setQuestionTwo] = useState("");
+  const navigate = useNavigate();
+
+  const questionOne = useRef("");
+  const questionTwo = useRef("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,11 +15,13 @@ const NewPoll = ({ authedUser, dispatch }) => {
     // add question
     dispatch(
       async_addQuestion({
-        optionOneText: questionOne,
-        optionTwoText: questionTwo,
+        optionOneText: questionOne.current.value,
+        optionTwoText: questionTwo.current.value,
         author: authedUser,
       })
     );
+
+    navigate("/Dashboard");
   };
 
   return (
@@ -28,7 +33,7 @@ const NewPoll = ({ authedUser, dispatch }) => {
       <p className="center">
         <label>First Option</label>
         <input
-          onChange={(e) => setQuestionOne(e.target.value)}
+          ref={questionOne}
           type="text"
           required
           placeholder="option One"
@@ -38,7 +43,7 @@ const NewPoll = ({ authedUser, dispatch }) => {
       <p className="center">
         <label>Second Option</label>
         <input
-          onChange={(e) => setQuestionTwo(e.target.value)}
+          ref={questionTwo}
           type="text"
           required
           placeholder="option Two"

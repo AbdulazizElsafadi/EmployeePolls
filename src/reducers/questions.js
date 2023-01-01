@@ -3,6 +3,7 @@ import {
   GET_QUESTIONS,
   SAVE_QUESTION_ANSWER,
 } from "../actions/questions";
+
 const questions = (state = {}, action) => {
   switch (action.type) {
     case ADD_QUESTION:
@@ -18,16 +19,13 @@ const questions = (state = {}, action) => {
       };
 
     case SAVE_QUESTION_ANSWER:
-      // console.log("authedUser in reducer:", state);
-      // console.log("question in reducer:", action.qid);
-      // console.log("vote in reducer:", state[action.qid][action.answer]);
-
       return {
         ...state,
         [action.qid]: {
           ...state[action.qid],
           [action.answer]: {
             ...state[action.qid].answer,
+            ...state[action.qid][action.answer],
             votes: state[action.qid][action.answer].votes.concat([
               action.authedUser,
             ]),

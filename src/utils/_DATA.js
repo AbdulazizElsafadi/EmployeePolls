@@ -38,7 +38,7 @@ let users = {
     questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
   },
   Abdulaziz: {
-    id: "azeez",
+    id: "Abdulaziz",
     password: "1234",
     name: "Abdulaziz Alsafadi",
     avatarURL: image,

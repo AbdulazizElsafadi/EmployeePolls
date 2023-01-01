@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { formatDate } from "../utils/_DATA";
 
 const Poll = ({ question }) => {
@@ -6,8 +7,8 @@ const Poll = ({ question }) => {
     <div className="poll">
       <h3>{question.author}</h3>
       <p>{formatDate(question.timestamp)}</p>
-      <hr />
-      <a href="/PollPage">show</a>
+      <hr style={{ width: "100%" }} />
+      <Link to={`/questions/${question.id}`}>Show</Link>
     </div>
   );
 };

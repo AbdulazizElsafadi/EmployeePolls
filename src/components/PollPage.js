@@ -1,75 +1,47 @@
 import { connect } from "react-redux";
-import { async_saveQuestionAnswer } from "../actions/shared";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import AnsweredPoll from "./AnsweredPoll";
+import UnansweredPoll from "./UnansweredPoll";
 
-const PollPage = ({ id, answered, question, user, authedUser, dispatch }) => {
-  console.log("answer:", answered);
-  const handleAnswer = (answer) =>
-    dispatch(async_saveQuestionAnswer(authedUser, id, answer));
+const withRouter = (Component) => {
+  const ComponentWithRouterProp = (props) => {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return <Component {...props} router={{ location, navigate, params }} />;
+  };
+  return ComponentWithRouterProp;
+};
 
-  // Don't forget to make sure that the authedUser didn't answer this question
-
+const PollPage = ({ question, user, authedUser, dispatch }) => {
   let flag = false;
-  return answered ? (
-    <div className="poll-page">
-      <h1 className="center">Poll by {user.id}</h1>
-      <img className="avatar" src={user.avatarURL} alt={user.id} />
-      {question.optionOne.votes.map((user) => {
-        return user === authedUser ? (flag = true) : (flag = false);
+  return (
+    <div>
+      {Object.keys(authedUser.answers).map((answer) => {
+        return answer === question.id ? (flag = true) : null;
       })}
+
       {flag ? (
-        <h2 className="center">Your answer was: {question.optionOne.text}</h2>
+        <AnsweredPoll question={question} user={user} authedUser={authedUser} />
       ) : (
-        <h2 className="center">Your answer was: {question.optionTwo.text}</h2>
+        <UnansweredPoll
+          question={question}
+          user={user}
+          authedUser={authedUser}
+          dispatch={dispatch}
+        />
       )}
-
-      <h2 className="center">
-        People who voted to your answer: {question.optionOne.votes.length}
-      </h2>
-
-      <h2 className="center">
-        Percentage of people who voted like you:{" "}
-        {(question.optionOne.votes.length /
-          (question.optionOne.votes.length + question.optionTwo.votes.length)) *
-          100 +
-          "%"}
-      </h2>
-    </div>
-  ) : (
-    <div className="poll-page">
-      <h1 className="center">Poll by {user.id}</h1>
-      <img className="avatar" src={user.avatarURL} alt={user.id} />
-      <h2 className="center">Would You Rather</h2>
-
-      <div className="options">
-        <div>
-          <p>{question.optionOne.text}</p>
-          <button
-            className="option-btn"
-            onClick={() => handleAnswer("optionOne")}
-          >
-            click
-          </button>
-        </div>
-        <div>
-          <p>{question.optionTwo.text}</p>
-          <button
-            className="option-btn"
-            onClick={() => handleAnswer("optionTwo")}
-          >
-            click
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
 
-const mapStateToProp = ({ questions, users, authedUser }, { id }) => {
+const mapStateToProp = ({ questions, users, authedUser }, props) => {
+  const id = props.router.params.question_id;
   return {
     question: questions[id],
     user: users[questions[id].author],
-    authedUser,
+    authedUser: users[authedUser],
   };
 };
 
-export default connect(mapStateToProp)(PollPage);
+export default withRouter(connect(mapStateToProp)(PollPage));

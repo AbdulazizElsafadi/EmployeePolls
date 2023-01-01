@@ -1,3 +1,5 @@
+import image from "./Abdulaziz.jpeg";
+
 let users = {
   sarahedo: {
     id: "sarahedo",
@@ -36,10 +38,10 @@ let users = {
     questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
   },
   Abdulaziz: {
-    id: "Abdulaziz",
+    id: "azeez",
     password: "1234",
     name: "Abdulaziz Alsafadi",
-    avatarURL: "./Abdulaziz.jpeg",
+    avatarURL: image,
     answers: {
       xj352vofupe1dqz9emx13r: "optionOne",
     },

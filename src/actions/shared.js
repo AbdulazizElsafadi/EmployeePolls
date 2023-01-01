@@ -1,8 +1,10 @@
-import { _getUsers, _getQuestions } from "../utils/_DATA";
-import { getUsers } from "./users";
-import { getQuestions } from "./questions";
+import { _getUsers, _getQuestions, _saveQuestionAnswer } from "../utils/_DATA";
+import { getUsers, saveUserAnswer } from "./users";
+import { getQuestions, saveQuestionAnswer } from "./questions";
 import { setAuthedUser } from "./authedUser";
 // import { showLoading, hideLoading } from "react-redux-loading-bar";
+
+export const SAVE_QUESTION_ANSWER = "SAVE_QUESTION_ANSWER";
 
 export const async_getData = () => {
   return (dispatch) => {
@@ -15,5 +17,18 @@ export const async_getData = () => {
         // dispatch(hideLoading());
       })
       .catch((err) => console.log("error occurred in getting the data:", err));
+  };
+};
+
+export const async_saveQuestionAnswer = (authedUser, qid, answer) => {
+  return (dispatch) => {
+    _saveQuestionAnswer({ authedUser, qid, answer })
+      .then(() => {
+        dispatch(saveUserAnswer(authedUser, qid, answer));
+        dispatch(saveQuestionAnswer(authedUser, qid, answer));
+      })
+      .catch((err) =>
+        console.log("Error occurred in saving a question answer:", err)
+      );
   };
 };

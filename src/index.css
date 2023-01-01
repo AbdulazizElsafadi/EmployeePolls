@@ -5,8 +5,12 @@ code {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #252525;
 }
+
 form {
   border: 3px solid #f1f1f1;
 }
@@ -17,8 +21,12 @@ form {
 }
 
 img.avatar {
-  width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
   border-radius: 50%;
+  margin: auto;
 }
 
 input[type="text"],
@@ -31,7 +39,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-button {
+.login-btn {
   background-color: #04aa6d;
   color: white;
   padding: 14px 20px;
@@ -41,12 +49,17 @@ button {
   width: 100%;
 }
 
-button:hover {
+.login-btn:hover {
   opacity: 0.8;
 }
 
 .container {
+  margin: 0 auto;
   padding: 16px;
+}
+
+.center {
+  text-align: center;
 }
 
 span.psw {
@@ -56,22 +69,72 @@ span.psw {
 
 .polls-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  flex-grow: 5;
   gap: 2em;
-  border: solid black;
-  padding: 8px;
+  margin: 0 auto;
+  width: 95%;
+  border: 3px solid rgb(119, 119, 119);
+  padding: 10px;
 }
 
 .answered {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  border: solid green;
+  border: 2px solid rgb(119, 119, 119);
 }
 
 .unanswered {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  border: solid red;
+  border: 2px solid rgb(119, 119, 119);
+}
+
+.poll {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  margin: 8px;
+  border: 1px solid rgb(119, 119, 119);
+}
+
+.poll a {
+  color: rgba(59, 196, 59, 0.846);
+  border: 2px solid rgba(59, 196, 59, 0.846);
+  align-self: stretch;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3em;
+}
+
+.option-btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.new-page .option-btn {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.option-btn:hover {
+  opacity: 0.8;
 }

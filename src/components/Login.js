@@ -52,7 +52,9 @@ const Login = (props) => {
           required
         />
 
-        <button type="submit">Login</button>
+        <button className="login-btn" type="submit">
+          Login
+        </button>
       </div>
     </form>
   );

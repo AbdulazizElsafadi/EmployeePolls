@@ -58,7 +58,14 @@ const App = (props) => {
               </Auth>
             }
           ></Route>
-          <Route path="*" element={<ErrorPage />}></Route>
+          <Route
+            path="*"
+            element={
+              <Auth>
+                <ErrorPage />
+              </Auth>
+            }
+          ></Route>
         </Routes>
       </div>
     </Fragment>

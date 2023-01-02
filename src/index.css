@@ -77,7 +77,24 @@ span.psw {
   padding: 10px;
 }
 
-.cont {
+.toggle {
+  background-color: #04aa6d;
+  color: white;
+  /* padding: 5px; */
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 40%;
+  align-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.cont-answered,
+.cont-unanswered {
   border: 3px solid #f1f1f1;
   border-radius: 10px;
 }

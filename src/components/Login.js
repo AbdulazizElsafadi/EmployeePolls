@@ -1,12 +1,16 @@
 import { useRef, useState } from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { setAuthedUser } from "../actions/authedUser";
 
 const Login = ({ users, dispatch }) => {
   const username = useRef("");
   const password = useRef("");
+
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const redirectPath = location.state?.path || "/";
 
   const [errMess, setErrMess] = useState(null);
 
@@ -20,7 +24,7 @@ const Login = ({ users, dispatch }) => {
       dispatch(setAuthedUser(users[username.current.value].id));
       // navigate to home page
 
-      navigate("/", { replace: true });
+      navigate(redirectPath, { replace: true });
     } else setErrMess("username or password is incorrect");
   };
 

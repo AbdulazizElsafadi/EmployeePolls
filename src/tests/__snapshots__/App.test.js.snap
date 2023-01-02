@@ -49,7 +49,9 @@ Object {
             class="login-btn"
             data-testid="submit-button"
             type="submit"
-          />
+          >
+            Login
+          </button>
         </div>
       </form>
     </div>
@@ -57,8 +59,15 @@ Object {
       <div
         class="polls-container"
       >
+        <button
+          class="toggle center"
+        >
+          <h2>
+            Show Answered Polls
+          </h2>
+        </button>
         <div
-          class="cont"
+          class="cont-unanswered"
           data-testid="cont"
         >
           <h2
@@ -77,39 +86,18 @@ Object {
               data-testid="poll"
             >
               <h3>
-                sarahedo
+                tylermcginnis
               </h3>
               <p>
-                5:21:AM | 6/29/2016
+                3:09:PM | 3/15/2017
               </p>
               <hr
                 style="width: 100%; border: 1px solid #f1f1f1;"
               />
               <a
                 class="opt-btn"
-                data-testid="8xf0y6ziyjabvozdd253nd"
-                href="/questions/8xf0y6ziyjabvozdd253nd"
-              >
-                Show
-              </a>
-            </div>
-            <div
-              class="poll"
-              data-testid="poll"
-            >
-              <h3>
-                mtsamis
-              </h3>
-              <p>
-                10:02AM | 7/14/2016
-              </p>
-              <hr
-                style="width: 100%; border: 1px solid #f1f1f1;"
-              />
-              <a
-                class="opt-btn"
-                data-testid="6ni6ok3ym7mf1p33lnez"
-                href="/questions/6ni6ok3ym7mf1p33lnez"
+                data-testid="vthrdm985a262al8qx3do"
+                href="/questions/vthrdm985a262al8qx3do"
               >
                 Show
               </a>
@@ -161,18 +149,39 @@ Object {
               data-testid="poll"
             >
               <h3>
-                tylermcginnis
+                mtsamis
               </h3>
               <p>
-                3:09:PM | 3/15/2017
+                10:02AM | 7/14/2016
               </p>
               <hr
                 style="width: 100%; border: 1px solid #f1f1f1;"
               />
               <a
                 class="opt-btn"
-                data-testid="vthrdm985a262al8qx3do"
-                href="/questions/vthrdm985a262al8qx3do"
+                data-testid="6ni6ok3ym7mf1p33lnez"
+                href="/questions/6ni6ok3ym7mf1p33lnez"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                5:21:AM | 6/29/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="8xf0y6ziyjabvozdd253nd"
+                href="/questions/8xf0y6ziyjabvozdd253nd"
               >
                 Show
               </a>
@@ -180,7 +189,7 @@ Object {
           </div>
         </div>
         <div
-          class="cont"
+          class="cont-answered hidden"
         >
           <h2
             class="center"
@@ -223,8 +232,15 @@ Object {
     <div
       class="polls-container"
     >
+      <button
+        class="toggle center"
+      >
+        <h2>
+          Show Answered Polls
+        </h2>
+      </button>
       <div
-        class="cont"
+        class="cont-unanswered"
         data-testid="cont"
       >
         <h2
@@ -243,39 +259,18 @@ Object {
             data-testid="poll"
           >
             <h3>
-              sarahedo
+              tylermcginnis
             </h3>
             <p>
-              5:21:AM | 6/29/2016
+              3:09:PM | 3/15/2017
             </p>
             <hr
               style="width: 100%; border: 1px solid #f1f1f1;"
             />
             <a
               class="opt-btn"
-              data-testid="8xf0y6ziyjabvozdd253nd"
-              href="/questions/8xf0y6ziyjabvozdd253nd"
-            >
-              Show
-            </a>
-          </div>
-          <div
-            class="poll"
-            data-testid="poll"
-          >
-            <h3>
-              mtsamis
-            </h3>
-            <p>
-              10:02AM | 7/14/2016
-            </p>
-            <hr
-              style="width: 100%; border: 1px solid #f1f1f1;"
-            />
-            <a
-              class="opt-btn"
-              data-testid="6ni6ok3ym7mf1p33lnez"
-              href="/questions/6ni6ok3ym7mf1p33lnez"
+              data-testid="vthrdm985a262al8qx3do"
+              href="/questions/vthrdm985a262al8qx3do"
             >
               Show
             </a>
@@ -327,18 +322,39 @@ Object {
             data-testid="poll"
           >
             <h3>
-              tylermcginnis
+              mtsamis
             </h3>
             <p>
-              3:09:PM | 3/15/2017
+              10:02AM | 7/14/2016
             </p>
             <hr
               style="width: 100%; border: 1px solid #f1f1f1;"
             />
             <a
               class="opt-btn"
-              data-testid="vthrdm985a262al8qx3do"
-              href="/questions/vthrdm985a262al8qx3do"
+              data-testid="6ni6ok3ym7mf1p33lnez"
+              href="/questions/6ni6ok3ym7mf1p33lnez"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              5:21:AM | 6/29/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="8xf0y6ziyjabvozdd253nd"
+              href="/questions/8xf0y6ziyjabvozdd253nd"
             >
               Show
             </a>
@@ -346,7 +362,7 @@ Object {
         </div>
       </div>
       <div
-        class="cont"
+        class="cont-answered hidden"
       >
         <h2
           class="center"
@@ -446,8 +462,15 @@ Object {
       <div
         class="polls-container"
       >
+        <button
+          class="toggle center"
+        >
+          <h2>
+            Show Answered Polls
+          </h2>
+        </button>
         <div
-          class="cont"
+          class="cont-unanswered"
           data-testid="cont"
         >
           <h2
@@ -466,39 +489,18 @@ Object {
               data-testid="poll"
             >
               <h3>
-                sarahedo
+                tylermcginnis
               </h3>
               <p>
-                5:21:AM | 6/29/2016
+                3:09:PM | 3/15/2017
               </p>
               <hr
                 style="width: 100%; border: 1px solid #f1f1f1;"
               />
               <a
                 class="opt-btn"
-                data-testid="8xf0y6ziyjabvozdd253nd"
-                href="/questions/8xf0y6ziyjabvozdd253nd"
-              >
-                Show
-              </a>
-            </div>
-            <div
-              class="poll"
-              data-testid="poll"
-            >
-              <h3>
-                mtsamis
-              </h3>
-              <p>
-                10:02AM | 7/14/2016
-              </p>
-              <hr
-                style="width: 100%; border: 1px solid #f1f1f1;"
-              />
-              <a
-                class="opt-btn"
-                data-testid="6ni6ok3ym7mf1p33lnez"
-                href="/questions/6ni6ok3ym7mf1p33lnez"
+                data-testid="vthrdm985a262al8qx3do"
+                href="/questions/vthrdm985a262al8qx3do"
               >
                 Show
               </a>
@@ -550,18 +552,39 @@ Object {
               data-testid="poll"
             >
               <h3>
-                tylermcginnis
+                mtsamis
               </h3>
               <p>
-                3:09:PM | 3/15/2017
+                10:02AM | 7/14/2016
               </p>
               <hr
                 style="width: 100%; border: 1px solid #f1f1f1;"
               />
               <a
                 class="opt-btn"
-                data-testid="vthrdm985a262al8qx3do"
-                href="/questions/vthrdm985a262al8qx3do"
+                data-testid="6ni6ok3ym7mf1p33lnez"
+                href="/questions/6ni6ok3ym7mf1p33lnez"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                5:21:AM | 6/29/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="8xf0y6ziyjabvozdd253nd"
+                href="/questions/8xf0y6ziyjabvozdd253nd"
               >
                 Show
               </a>
@@ -569,7 +592,7 @@ Object {
           </div>
         </div>
         <div
-          class="cont"
+          class="cont-answered hidden"
         >
           <h2
             class="center"
@@ -612,8 +635,15 @@ Object {
     <div
       class="polls-container"
     >
+      <button
+        class="toggle center"
+      >
+        <h2>
+          Show Answered Polls
+        </h2>
+      </button>
       <div
-        class="cont"
+        class="cont-unanswered"
         data-testid="cont"
       >
         <h2
@@ -632,39 +662,18 @@ Object {
             data-testid="poll"
           >
             <h3>
-              sarahedo
+              tylermcginnis
             </h3>
             <p>
-              5:21:AM | 6/29/2016
+              3:09:PM | 3/15/2017
             </p>
             <hr
               style="width: 100%; border: 1px solid #f1f1f1;"
             />
             <a
               class="opt-btn"
-              data-testid="8xf0y6ziyjabvozdd253nd"
-              href="/questions/8xf0y6ziyjabvozdd253nd"
-            >
-              Show
-            </a>
-          </div>
-          <div
-            class="poll"
-            data-testid="poll"
-          >
-            <h3>
-              mtsamis
-            </h3>
-            <p>
-              10:02AM | 7/14/2016
-            </p>
-            <hr
-              style="width: 100%; border: 1px solid #f1f1f1;"
-            />
-            <a
-              class="opt-btn"
-              data-testid="6ni6ok3ym7mf1p33lnez"
-              href="/questions/6ni6ok3ym7mf1p33lnez"
+              data-testid="vthrdm985a262al8qx3do"
+              href="/questions/vthrdm985a262al8qx3do"
             >
               Show
             </a>
@@ -716,18 +725,39 @@ Object {
             data-testid="poll"
           >
             <h3>
-              tylermcginnis
+              mtsamis
             </h3>
             <p>
-              3:09:PM | 3/15/2017
+              10:02AM | 7/14/2016
             </p>
             <hr
               style="width: 100%; border: 1px solid #f1f1f1;"
             />
             <a
               class="opt-btn"
-              data-testid="vthrdm985a262al8qx3do"
-              href="/questions/vthrdm985a262al8qx3do"
+              data-testid="6ni6ok3ym7mf1p33lnez"
+              href="/questions/6ni6ok3ym7mf1p33lnez"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              5:21:AM | 6/29/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="8xf0y6ziyjabvozdd253nd"
+              href="/questions/8xf0y6ziyjabvozdd253nd"
             >
               Show
             </a>
@@ -735,7 +765,7 @@ Object {
         </div>
       </div>
       <div
-        class="cont"
+        class="cont-answered hidden"
       >
         <h2
           class="center"

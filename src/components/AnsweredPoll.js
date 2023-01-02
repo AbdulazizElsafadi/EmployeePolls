@@ -1,7 +1,7 @@
 const AnsweredPoll = ({ question, user, authedUser }) => {
   let flag = false;
   return (
-    <div className="poll-page">
+    <div className="poll-page" data-testid="clickedPoll">
       <h1 className="center">Poll by {user.id}</h1>
       <img className="avatar" src={user.avatarURL} alt={user.id} />
       {question.optionOne.votes.map((question) => {
@@ -15,9 +15,11 @@ const AnsweredPoll = ({ question, user, authedUser }) => {
           </h2>
           <h2 className="center">
             Percentage of people who voted like you:{" "}
-            {(question.optionOne.votes.length /
+            {(
+              question.optionOne.votes.length /
               (question.optionOne.votes.length +
-                question.optionTwo.votes.length)) *
+                question.optionTwo.votes.length)
+            ).toFixed(2) *
               100 +
               "%"}
           </h2>
@@ -30,9 +32,11 @@ const AnsweredPoll = ({ question, user, authedUser }) => {
           </h2>
           <h2 className="center">
             Percentage of people who voted like you:{" "}
-            {(question.optionTwo.votes.length /
+            {(
+              question.optionTwo.votes.length /
               (question.optionOne.votes.length +
-                question.optionTwo.votes.length)) *
+                question.optionTwo.votes.length)
+            ).toFixed(2) *
               100 +
               "%"}
           </h2>

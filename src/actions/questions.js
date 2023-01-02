@@ -1,5 +1,3 @@
-import { _saveQuestion } from "../utils/_DATA";
-
 export const GET_QUESTIONS = "GET_QUESTIONS";
 export const SAVE_QUESTION_ANSWER = "SAVE_QUESTION_ANSWER";
 export const ADD_QUESTION = "ADD_QUESTION";
@@ -24,15 +22,5 @@ export const addQuestion = (question) => {
   return {
     type: ADD_QUESTION,
     question,
-  };
-};
-
-export const async_addQuestion = (question) => {
-  return (dispatch) => {
-    _saveQuestion(question)
-      .then((question) => {
-        dispatch(addQuestion(question));
-      })
-      .catch((err) => console.log("err, failed to add a new question", err));
   };
 };

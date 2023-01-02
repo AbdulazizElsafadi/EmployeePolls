@@ -13,7 +13,7 @@ const UnansweredPoll = ({ question, user, authedUser, dispatch }) => {
 
       <div className="options">
         <div>
-          <p>{question.optionOne.text}</p>
+          <p className="option-text">{question.optionOne.text}</p>
           <button
             className="option-btn"
             onClick={() => handleAnswer("optionOne")}

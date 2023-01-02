@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { connect } from "react-redux";
-import { async_addQuestion } from "../actions/questions";
+import { async_addQuestion } from "../actions/shared";
 import { useNavigate } from "react-router";
 
 const NewPoll = ({ authedUser, dispatch }) => {
@@ -21,7 +21,7 @@ const NewPoll = ({ authedUser, dispatch }) => {
       })
     );
 
-    navigate("/Dashboard");
+    navigate("/");
   };
 
   return (
@@ -37,6 +37,7 @@ const NewPoll = ({ authedUser, dispatch }) => {
           type="text"
           required
           placeholder="option One"
+          data-testid="optionOne"
         />
       </p>
 
@@ -47,10 +48,16 @@ const NewPoll = ({ authedUser, dispatch }) => {
           type="text"
           required
           placeholder="option Two"
+          data-testid="optionTwo"
         />
       </p>
 
-      <input className="option-btn" type="submit" placeholder="Submit" />
+      <input
+        className="option-btn"
+        type="submit"
+        placeholder="Submit"
+        data-testid="submit"
+      />
     </form>
   );
 };

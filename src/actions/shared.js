@@ -1,11 +1,14 @@
-import { _getUsers, _getQuestions, _saveQuestionAnswer } from "../utils/_DATA";
+import {
+  _getUsers,
+  _getQuestions,
+  _saveQuestionAnswer,
+  _saveQuestion,
+} from "../utils/_DATA";
 import { getUsers, saveUserAnswer } from "./users";
 import { getQuestions, saveQuestionAnswer } from "./questions";
-import { setAuthedUser } from "./authedUser";
+import { addQuestion } from "./questions";
+import { addUserQuestion } from "./users";
 import { showLoading, hideLoading } from "react-redux-loading-bar";
-
-export const SAVE_QUESTION_ANSWER = "SAVE_QUESTION_ANSWER";
-
 export const async_getData = () => {
   return (dispatch) => {
     dispatch(showLoading());
@@ -13,7 +16,6 @@ export const async_getData = () => {
       .then(([users, questions]) => {
         dispatch(getUsers(users));
         dispatch(getQuestions(questions));
-        // dispatch(setAuthedUser("sarahedo"));
         dispatch(hideLoading());
       })
       .catch((err) => console.log("error occurred in getting the data:", err));
@@ -32,5 +34,16 @@ export const async_saveQuestionAnswer = (authedUser, qid, answer) => {
       .catch((err) =>
         console.log("Error occurred in saving a question answer:", err)
       );
+  };
+};
+
+export const async_addQuestion = (question) => {
+  return (dispatch) => {
+    _saveQuestion(question)
+      .then((question) => {
+        dispatch(addQuestion(question));
+        dispatch(addUserQuestion(question));
+      })
+      .catch((err) => console.log("err, failed to add a new question", err));
   };
 };

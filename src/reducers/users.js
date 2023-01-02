@@ -1,4 +1,9 @@
-import { GET_USERS, SAVE_USER_ANSWER } from "../actions/users";
+import {
+  GET_USERS,
+  SAVE_USER_ANSWER,
+  ADD_USER_QUESTION,
+} from "../actions/users";
+
 const users = (state = {}, action) => {
   switch (action.type) {
     case GET_USERS:
@@ -16,6 +21,21 @@ const users = (state = {}, action) => {
             ...state[action.authedUser].answers,
             [action.qid]: action.answer,
           },
+        },
+      };
+
+    case ADD_USER_QUESTION:
+      console.log(
+        "state[action.question.author]:",
+        state[action.question.author]
+      );
+      return {
+        ...state,
+        [action.question.author]: {
+          ...state[action.question.author],
+          questions: state[action.question.author].questions.concat([
+            action.question.id,
+          ]),
         },
       };
 

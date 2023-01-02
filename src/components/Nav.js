@@ -1,20 +1,41 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { setAuthedUser } from "../actions/authedUser";
 
-const Nav = ({ authedUser }) => {
+const Nav = ({ authedUser, dispatch }) => {
+  const navigate = useNavigate();
+
+  const handLogout = () => {
+    dispatch(setAuthedUser(null));
+    navigate("/login");
+  };
+
   return (
     <>
       {authedUser ? (
         <>
           <header className="header">
             <nav className="nav">
-              <Link className="hover-underline-animation" to="/Dashboard">
+              <Link
+                className="hover-underline-animation"
+                data-testid="home"
+                to="/"
+              >
                 Home
               </Link>
-              <Link className="hover-underline-animation" to="/Leaderboard">
+              <Link
+                className="hover-underline-animation"
+                data-testid="leaderboard"
+                to="/Leaderboard"
+              >
                 Leaderboard
               </Link>
-              <Link className="hover-underline-animation" to="/add">
+              <Link
+                className="hover-underline-animation"
+                data-testid="add"
+                to="/add"
+              >
                 New
               </Link>
             </nav>
@@ -23,7 +44,8 @@ const Nav = ({ authedUser }) => {
               <span>{authedUser.id}</span>
               <Link
                 className="logout hover-underline-animation"
-                href="./logout"
+                onClick={handLogout}
+                data-testid="logout"
               >
                 Logout
               </Link>

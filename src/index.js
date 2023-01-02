@@ -8,7 +8,7 @@ import middleware from "./middlewares";
 import { createStore } from "redux";
 import { BrowserRouter } from "react-router-dom";
 
-const store = createStore(reducer, middleware);
+export const store = createStore(reducer, middleware);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

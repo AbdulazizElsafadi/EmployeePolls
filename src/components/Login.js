@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setAuthedUser } from "../actions/authedUser";
 
-const Login = (props) => {
+const Login = ({ users, dispatch }) => {
   const username = useRef("");
   const password = useRef("");
   const navigate = useNavigate();
@@ -12,7 +12,6 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { users, dispatch } = props;
     if (
       users[username.current.value] &&
       users[username.current.value].password === password.current.value
@@ -20,7 +19,8 @@ const Login = (props) => {
       setErrMess(null);
       dispatch(setAuthedUser(users[username.current.value].id));
       // navigate to home page
-      navigate("/Dashboard");
+
+      navigate("/", { replace: true });
     } else setErrMess("username or password is incorrect");
   };
 
@@ -33,14 +33,15 @@ const Login = (props) => {
           className="avatar"
         />
       </div>
+      <h2 className="center">You Need To Login</h2>
 
-      {errMess && <h1>{errMess}</h1>}
-
+      {errMess && <h1 data-testid="error-message">{errMess}</h1>}
       <div className="container">
         <label>
           <b>Username</b>
         </label>
         <input
+          data-testid="username"
           type="text"
           placeholder="Enter Username"
           ref={username}
@@ -51,13 +52,14 @@ const Login = (props) => {
           <b>Password</b>
         </label>
         <input
+          data-testid="password"
           type="password"
           placeholder="Enter Password"
           ref={password}
           required
         />
 
-        <button className="login-btn" type="submit">
+        <button className="login-btn" type="submit" data-testid="submit-button">
           Login
         </button>
       </div>

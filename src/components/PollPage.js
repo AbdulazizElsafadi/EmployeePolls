@@ -22,9 +22,15 @@ const PollPage = ({ question, user, authedUser, dispatch }) => {
       })}
 
       {flag ? (
-        <AnsweredPoll question={question} user={user} authedUser={authedUser} />
+        <AnsweredPoll
+          data-testid={question.id}
+          question={question}
+          user={user}
+          authedUser={authedUser}
+        />
       ) : (
         <UnansweredPoll
+          data-testid={question.id}
           question={question}
           user={user}
           authedUser={authedUser}

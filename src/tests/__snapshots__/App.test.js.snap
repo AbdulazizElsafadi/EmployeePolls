@@ -1,0 +1,828 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Login Page Test7: testing if Dashboard is rendered after correct data are being passed 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="imgcontainer"
+        >
+          <img
+            alt="Avatar"
+            class="avatar"
+            src="https://www.w3schools.com/howto/img_avatar2.png"
+          />
+        </div>
+        <h2
+          class="center"
+        >
+          You Need To Login
+        </h2>
+        <div
+          class="container"
+        >
+          <label>
+            <b>
+              Username
+            </b>
+          </label>
+          <input
+            data-testid="username"
+            placeholder="Enter Username"
+            required=""
+            type="text"
+          />
+          <label>
+            <b>
+              Password
+            </b>
+          </label>
+          <input
+            data-testid="password"
+            placeholder="Enter Password"
+            required=""
+            type="password"
+          />
+          <button
+            class="login-btn"
+            data-testid="submit-button"
+            type="submit"
+          />
+        </div>
+      </form>
+    </div>
+    <div>
+      <div
+        class="polls-container"
+      >
+        <div
+          class="cont"
+          data-testid="cont"
+        >
+          <h2
+            class="center"
+          >
+            New Questions
+          </h2>
+          <hr
+            style="border: 2px solid #f1f1f1;"
+          />
+          <div
+            class="unanswered"
+          >
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                5:21:AM | 6/29/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="8xf0y6ziyjabvozdd253nd"
+                href="/questions/8xf0y6ziyjabvozdd253nd"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                mtsamis
+              </h3>
+              <p>
+                10:02AM | 7/14/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="6ni6ok3ym7mf1p33lnez"
+                href="/questions/6ni6ok3ym7mf1p33lnez"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                1:22:AM | 3/4/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="am8ehyc8byjqgar0jgpub9"
+                href="/questions/am8ehyc8byjqgar0jgpub9"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                tylermcginnis
+              </h3>
+              <p>
+                2:42:PM | 12/24/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="loxhs1bqm25b708cmbf3g"
+                href="/questions/loxhs1bqm25b708cmbf3g"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                tylermcginnis
+              </h3>
+              <p>
+                3:09:PM | 3/15/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="vthrdm985a262al8qx3do"
+                href="/questions/vthrdm985a262al8qx3do"
+              >
+                Show
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="cont"
+        >
+          <h2
+            class="center"
+          >
+            Done
+          </h2>
+          <hr
+            style="border: 2px solid #f1f1f1;"
+          />
+          <div
+            class="answered"
+          >
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                mtsamis
+              </h3>
+              <p>
+                10:16PM | 4/30/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="xj352vofupe1dqz9emx13r"
+                href="/questions/xj352vofupe1dqz9emx13r"
+              >
+                Show
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="polls-container"
+    >
+      <div
+        class="cont"
+        data-testid="cont"
+      >
+        <h2
+          class="center"
+        >
+          New Questions
+        </h2>
+        <hr
+          style="border: 2px solid #f1f1f1;"
+        />
+        <div
+          class="unanswered"
+        >
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              5:21:AM | 6/29/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="8xf0y6ziyjabvozdd253nd"
+              href="/questions/8xf0y6ziyjabvozdd253nd"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              mtsamis
+            </h3>
+            <p>
+              10:02AM | 7/14/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="6ni6ok3ym7mf1p33lnez"
+              href="/questions/6ni6ok3ym7mf1p33lnez"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              1:22:AM | 3/4/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="am8ehyc8byjqgar0jgpub9"
+              href="/questions/am8ehyc8byjqgar0jgpub9"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              tylermcginnis
+            </h3>
+            <p>
+              2:42:PM | 12/24/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="loxhs1bqm25b708cmbf3g"
+              href="/questions/loxhs1bqm25b708cmbf3g"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              tylermcginnis
+            </h3>
+            <p>
+              3:09:PM | 3/15/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="vthrdm985a262al8qx3do"
+              href="/questions/vthrdm985a262al8qx3do"
+            >
+              Show
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cont"
+      >
+        <h2
+          class="center"
+        >
+          Done
+        </h2>
+        <hr
+          style="border: 2px solid #f1f1f1;"
+        />
+        <div
+          class="answered"
+        >
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              mtsamis
+            </h3>
+            <p>
+              10:16PM | 4/30/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="xj352vofupe1dqz9emx13r"
+              href="/questions/xj352vofupe1dqz9emx13r"
+            >
+              Show
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Testing snapshot Dashboard Test5: Making sure that Dashboard is rendered correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="polls-container"
+      >
+        <div
+          class="cont"
+          data-testid="cont"
+        >
+          <h2
+            class="center"
+          >
+            New Questions
+          </h2>
+          <hr
+            style="border: 2px solid #f1f1f1;"
+          />
+          <div
+            class="unanswered"
+          >
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                5:21:AM | 6/29/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="8xf0y6ziyjabvozdd253nd"
+                href="/questions/8xf0y6ziyjabvozdd253nd"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                mtsamis
+              </h3>
+              <p>
+                10:02AM | 7/14/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="6ni6ok3ym7mf1p33lnez"
+                href="/questions/6ni6ok3ym7mf1p33lnez"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                sarahedo
+              </h3>
+              <p>
+                1:22:AM | 3/4/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="am8ehyc8byjqgar0jgpub9"
+                href="/questions/am8ehyc8byjqgar0jgpub9"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                tylermcginnis
+              </h3>
+              <p>
+                2:42:PM | 12/24/2016
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="loxhs1bqm25b708cmbf3g"
+                href="/questions/loxhs1bqm25b708cmbf3g"
+              >
+                Show
+              </a>
+            </div>
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                tylermcginnis
+              </h3>
+              <p>
+                3:09:PM | 3/15/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="vthrdm985a262al8qx3do"
+                href="/questions/vthrdm985a262al8qx3do"
+              >
+                Show
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="cont"
+        >
+          <h2
+            class="center"
+          >
+            Done
+          </h2>
+          <hr
+            style="border: 2px solid #f1f1f1;"
+          />
+          <div
+            class="answered"
+          >
+            <div
+              class="poll"
+              data-testid="poll"
+            >
+              <h3>
+                mtsamis
+              </h3>
+              <p>
+                10:16PM | 4/30/2017
+              </p>
+              <hr
+                style="width: 100%; border: 1px solid #f1f1f1;"
+              />
+              <a
+                class="opt-btn"
+                data-testid="xj352vofupe1dqz9emx13r"
+                href="/questions/xj352vofupe1dqz9emx13r"
+              >
+                Show
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="polls-container"
+    >
+      <div
+        class="cont"
+        data-testid="cont"
+      >
+        <h2
+          class="center"
+        >
+          New Questions
+        </h2>
+        <hr
+          style="border: 2px solid #f1f1f1;"
+        />
+        <div
+          class="unanswered"
+        >
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              5:21:AM | 6/29/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="8xf0y6ziyjabvozdd253nd"
+              href="/questions/8xf0y6ziyjabvozdd253nd"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              mtsamis
+            </h3>
+            <p>
+              10:02AM | 7/14/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="6ni6ok3ym7mf1p33lnez"
+              href="/questions/6ni6ok3ym7mf1p33lnez"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              sarahedo
+            </h3>
+            <p>
+              1:22:AM | 3/4/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="am8ehyc8byjqgar0jgpub9"
+              href="/questions/am8ehyc8byjqgar0jgpub9"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              tylermcginnis
+            </h3>
+            <p>
+              2:42:PM | 12/24/2016
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="loxhs1bqm25b708cmbf3g"
+              href="/questions/loxhs1bqm25b708cmbf3g"
+            >
+              Show
+            </a>
+          </div>
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              tylermcginnis
+            </h3>
+            <p>
+              3:09:PM | 3/15/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="vthrdm985a262al8qx3do"
+              href="/questions/vthrdm985a262al8qx3do"
+            >
+              Show
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cont"
+      >
+        <h2
+          class="center"
+        >
+          Done
+        </h2>
+        <hr
+          style="border: 2px solid #f1f1f1;"
+        />
+        <div
+          class="answered"
+        >
+          <div
+            class="poll"
+            data-testid="poll"
+          >
+            <h3>
+              mtsamis
+            </h3>
+            <p>
+              10:16PM | 4/30/2017
+            </p>
+            <hr
+              style="width: 100%; border: 1px solid #f1f1f1;"
+            />
+            <a
+              class="opt-btn"
+              data-testid="xj352vofupe1dqz9emx13r"
+              href="/questions/xj352vofupe1dqz9emx13r"
+            >
+              Show
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

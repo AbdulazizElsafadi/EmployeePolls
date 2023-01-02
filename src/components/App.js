@@ -10,6 +10,7 @@ import Nav from "./Nav";
 import { Routes, Route } from "react-router";
 import LoadingBar from "react-redux-loading-bar";
 import ErrorPage from "./ErrorPage";
+import Auth from "../utils/Auth";
 
 const App = (props) => {
   useEffect(() => {
@@ -22,14 +23,40 @@ const App = (props) => {
       <div className="container">
         <Nav />
         <Routes>
-          <Route path="/" exact element={<Login />}></Route>
-          <Route path="/Dashboard" element={<Dashboard />}></Route>
-          <Route path="/add" element={<NewPoll />}></Route>
-          <Route path="/leaderboard" element={<Leaderboard />}></Route>
+          <Route
+            path="/"
+            exact
+            element={
+              <Auth>
+                <Dashboard />
+              </Auth>
+            }
+          ></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route
+            path="/add"
+            element={
+              <Auth>
+                <NewPoll />
+              </Auth>
+            }
+          ></Route>
+          <Route
+            path="/leaderboard"
+            element={
+              <Auth>
+                <Leaderboard />
+              </Auth>
+            }
+          ></Route>
           <Route
             path="/questions/:question_id"
             exact
-            element={<PollPage />}
+            element={
+              <Auth>
+                <PollPage />
+              </Auth>
+            }
           ></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
@@ -37,11 +64,4 @@ const App = (props) => {
     </Fragment>
   );
 };
-
-// const mapStateToProps = ({ authedUser }) => {
-//   return {
-//     loading: authedUser === null,
-//   };
-// };
-
 export default connect(null)(App);

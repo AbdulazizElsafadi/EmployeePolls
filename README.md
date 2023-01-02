@@ -27,15 +27,15 @@ To install all dependencies to run the app
 
 user1:\
 id: sarahedo
-pass: password123\
+pass: password123
 
 user2:\
 id: tylermcginnis
-pass: abc321\
+pass: abc321
 
 user3:\
 id: mtsamis
-pass: xyz123\
+pass: xyz123
 
 user4:\
 id: Abdulaziz

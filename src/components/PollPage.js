@@ -1,5 +1,10 @@
 import { connect } from "react-redux";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  Navigate,
+} from "react-router-dom";
 import AnsweredPoll from "./AnsweredPoll";
 import UnansweredPoll from "./UnansweredPoll";
 
@@ -13,7 +18,12 @@ const withRouter = (Component) => {
   return ComponentWithRouterProp;
 };
 
-const PollPage = ({ question, user, authedUser, dispatch }) => {
+const PollPage = ({ id, questions, users, authedUser, dispatch }) => {
+  if (!questions[id]) return <Navigate to="*" />;
+
+  const question = questions[id];
+  const user = users[questions[id].author];
+
   let flag = false;
   return (
     <div>
@@ -43,10 +53,12 @@ const PollPage = ({ question, user, authedUser, dispatch }) => {
 
 const mapStateToProp = ({ questions, users, authedUser }, props) => {
   const id = props.router.params.question_id;
+
   return {
-    question: questions[id],
-    user: users[questions[id].author],
+    questions,
+    users,
     authedUser: users[authedUser],
+    id,
   };
 };
 

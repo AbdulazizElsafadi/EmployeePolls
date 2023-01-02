@@ -26,19 +26,19 @@ To install all dependencies to run the app
 ### To Login to the system here are the data of the application's users:
 
 user1:\
-id: sarahedo
+id: sarahedo\
 pass: password123
 
 user2:\
-id: tylermcginnis
+id: tylermcginnis\
 pass: abc321
 
 user3:\
-id: mtsamis
+id: mtsamis\
 pass: xyz123
 
 user4:\
-id: Abdulaziz
+id: Abdulaziz\
 pass: 1234
 
 ## I hope you enjoy exploring the project

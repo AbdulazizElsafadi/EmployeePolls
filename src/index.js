@@ -10,6 +10,9 @@ import { BrowserRouter } from "react-router-dom";
 
 export const store = createStore(reducer, middleware);
 
+// use the username and password that exists in the utils/_DATA.js
+// to login to the platform
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
